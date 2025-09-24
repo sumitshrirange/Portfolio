@@ -18,7 +18,7 @@ function Home() {
   ];
 
   return (
-    <div className="flex flex-col gap-30">
+    <div className="flex flex-col lg:gap-30 gap-20">
       <section className="flex flex-col items-center justify-center lg:inline">
         <Heading text1="SOFTWARE" text2="ENGINEER" />
 
@@ -40,6 +40,8 @@ function Home() {
           ))}
         </div>
       </section>
+
+      <Projects/>
     </div>
   );
 }

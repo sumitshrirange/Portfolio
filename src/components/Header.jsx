@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FaCode } from "react-icons/fa";
 import {
   Briefcase,
@@ -41,10 +41,10 @@ function Header() {
   return (
     <header className="fixed top-0 z-10 flex w-full items-center lg:top-5 lg:left-30 lg:w-fit">
       {/* Logo */}
-      <span className="flex w-full items-center bg-[#151312] px-3 py-2 text-2xl font-bold lg:px-0 lg:py-0">
+      <Link to={"/"} className="flex w-full items-center bg-[#151312] px-3 py-2 text-2xl font-bold lg:px-0 lg:py-0">
         <FaCode className="mr-1 text-[25px]" />
         Sum<span className="text-[#818181]">it.</span>
-      </span>
+      </Link>
 
       {/* Desktop Nav */}
       <nav
