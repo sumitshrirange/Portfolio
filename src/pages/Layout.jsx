@@ -9,7 +9,7 @@ function Layout() {
       <Header />
       <InfoCard />
 
-      <div className="lg:ml-[43%] xl:ml-[40%] lg:w-xl xl:w-3xl lg:mt-0 mt-17">
+      <div className="lg:ml-[43%] xl:ml-[40%] lg:w-xl xl:w-3xl lg:mt-0 mt-17 mb-12 md:mb-0">
         <Outlet />
       </div>
     </div>

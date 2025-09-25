@@ -1,6 +1,7 @@
 import React from "react";
 import Heading from "../components/ui/Heading";
 import Projects from "./Projects";
+import Experience from "./Experience";
 
 // Reusable stat card component
 const StatCard = React.memo(({ number, label }) => (
@@ -42,6 +43,7 @@ function Home() {
       </section>
 
       <Projects/>
+      <Experience/>
     </div>
   );
 }
