@@ -3,9 +3,9 @@ import { Route, Routes } from "react-router-dom";
 import Projects from "./pages/Projects";
 import Experience from "./pages/Experience";
 import Languages from "./pages/Languages";
-import ContactMe from "./pages/ContactMe";
 import Home from "./pages/Home";
 import Layout from "./pages/Layout";
+import Education from "./pages/Education";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
         <Route path={"/projects"} element={<Projects />} />
         <Route path={"/experience"} element={<Experience />} />
         <Route path={"/Languages"} element={<Languages />} />
-        <Route path={"/Contactme"} element={<ContactMe />} />
+        <Route path={"/education"} element={<Education />} />
       </Route>
     </Routes>
   );

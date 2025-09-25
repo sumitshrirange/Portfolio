@@ -68,25 +68,6 @@ function InfoCard() {
 
   return (
     <aside className="relative top-13 flex h-[580px] w-90 flex-col items-center justify-evenly rounded-2xl bg-white py-10 lg:fixed lg:top-24 lg:h-4/5 lg:w-100">
-      {/* Curved Dashed Line */}
-      <div className="absolute -left-13 top-0 rotate-170 flex items-center justify-center">
-        <svg
-          width="300"
-          height="110"
-          viewBox="0 0 300 150"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M 20 120 Q 150 -40 280 120"
-            stroke="#A5B6B2"
-            strokeWidth="4"
-            strokeDasharray="10,10"
-            fill="transparent"
-          />
-        </svg>
-      </div>
-
       {/* Admin Image */}
       <div className="flex h-[65%] w-[75%] items-center overflow-hidden rounded-2xl">
         <img

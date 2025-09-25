@@ -13,7 +13,6 @@ function ProjectCard() {
       techStack: [
         "React",
         "Tailwind CSS",
-        "Lucide-React",
         "React-Dom",
         "Framer-Motion",
       ],
@@ -28,8 +27,8 @@ function ProjectCard() {
         "Node",
         "Express",
         "Tailwind CSS",
-        "Google News API",
-        "Google Gemini API",
+        "News API",
+        "Gemini API",
       ],
     },
     {
@@ -63,11 +62,11 @@ function ProjectCard() {
   ];
 
   return (
-    <div className="flex flex-row flex-wrap items-center justify-between lg:gap-10 gap-18">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
       {dataProject.map((project) => (
         <div
           key={project.name}
-          className="relative bg-[#35333448] p-5 mt-10 lg:w-[47%] lg:h-75 h-62 rounded-2xl"
+          className="relative bg-[#35333448] p-5 rounded-2xl"
         >
           {/* Header */}
           <div className="flex items-center justify-between mb-4">
@@ -91,19 +90,18 @@ function ProjectCard() {
           </div>
 
           {/* Thumbnail */}
-          <div className="flex h-[65%] items-center overflow-hidden">
+          <div className="flex md:h-50 lg:h-42 h-34 items-center overflow-hidden rounded-t-lg">
             <img
               src={project.thumbnail}
-              className="object-cover"
+              className="object-cover w-full h-full"
               alt={`${project.name} project`}
-              loading="lazy"
             />
           </div>
 
           {/* Tech Stack */}
-          <div className="absolute left-0 lg:top-52 top-45 bg-[#35333448] backdrop-blur-[7px] w-full rounded-2xl">
-            <div className="p-4 lg:mt-10 mt-8 border-t-2">
-              <div className="flex flex-col items-center gap-2 text-xs">
+          <div className="bg-[#35333448] backdrop-blur-[7px] w-full rounded-b-lg">
+            <div className="pt-5">
+              <div className="flex py-3 px-1 border-t-2 flex-col items-center gap-2 text-xs">
                 <span className="underline">Tech Stack</span>
                 <span className="flex items-center flex-wrap justify-center">
                   {project.techStack.map((tech, index) => (

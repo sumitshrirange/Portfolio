@@ -4,7 +4,7 @@ function Heading({
   text1,
   text2,
   align = "text-center lg:text-start",
-  size = "text-5xl lg:text-9xl",
+  size = "text-5xl md:text-7xl lg:text-8xl xl:text-9xl",
   primaryColor = "text-white",
   secondaryColor = "text-[#353334]",
 }) {

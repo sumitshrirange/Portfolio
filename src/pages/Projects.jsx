@@ -9,7 +9,7 @@ function Projects() {
 
       <ProjectCard/>
 
-      <div className="flex justify-center lg:mt-20 mt-27">
+      <div className="flex justify-center mt-6">
         <a
           href="https://github.com/sumitshrirange"
           className="flex items-center gap-2 text-sm font-semibold bg-[#35333448] w-fit px-7 py-2 rounded-full"

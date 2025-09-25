@@ -3,20 +3,20 @@ import { Link, NavLink } from "react-router-dom";
 import logoImg from "../assets/logo.png"
 import {
   Briefcase,
-  ContactRound,
+  CodeXml,
   Ellipsis,
   EllipsisVertical,
   Folder,
+  GraduationCap,
   House,
-  Wrench,
 } from "lucide-react";
 
 const navItems = [
   { path: "/", icon: House, label: "Home" },
   { path: "/projects", icon: Folder, label: "Projects" },
   { path: "/experience", icon: Briefcase, label: "Experience" },
-  { path: "/languages", icon: Wrench, label: "Languages" },
-  { path: "/contactme", icon: ContactRound, label: "Contact Me" },
+  { path: "/education", icon: GraduationCap, label: "Education" },
+  { path: "/languages", icon: CodeXml, label: "Languages" },
 ];
 
 // Reusable Nav Item
