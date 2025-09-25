@@ -2,6 +2,7 @@ import React from "react";
 import Heading from "../components/ui/Heading";
 import Projects from "./Projects";
 import Experience from "./Experience";
+import Education from "./Education";
 
 // Reusable stat card component
 const StatCard = React.memo(({ number, label }) => (
@@ -21,7 +22,7 @@ function Home() {
   return (
     <div className="flex flex-col lg:gap-30 gap-20">
       <section className="flex flex-col items-center justify-center lg:inline">
-        <Heading text1="SOFTWARE" text2="ENGINEER" />
+        <Heading text1="SOFTWARE" text2="ENGINEER" align="text-center lg:text-start" />
 
         <p className="mt-5 mb-5 lg:mb-15 text-[#818181] text-justify">
           Aspiring Full Stack Web Developer skilled in building responsive and
@@ -44,6 +45,7 @@ function Home() {
 
       <Projects/>
       <Experience/>
+      <Education/>
     </div>
   );
 }
