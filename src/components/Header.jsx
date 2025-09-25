@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { FaCode } from "react-icons/fa";
+import logoImg from "../assets/logo.png"
 import {
   Briefcase,
   ContactRound,
@@ -26,7 +26,7 @@ const NavItem = ({ path, Icon, label, onClick }) => (
     onClick={onClick}
     className={({ isActive }) =>
       `relative transition-colors duration-200 ${
-        isActive ? "text-red-700" : "text-white hover:text-red-700"
+        isActive ? "text-[#07e1c1]" : "text-white hover:text-[#07e1c1]"
       }`
     }
     aria-label={label}
@@ -42,8 +42,8 @@ function Header() {
     <header className="fixed top-0 z-10 flex w-full items-center lg:top-5 lg:left-30 lg:w-fit">
       {/* Logo */}
       <Link to={"/"} className="flex w-full items-center bg-[#151312] px-3 py-2 text-2xl font-bold lg:px-0 lg:py-0">
-        <FaCode className="mr-1 text-[25px]" />
-        Sum<span className="text-[#818181]">it.</span>
+        <img src={logoImg} className="w-[21px] mb-[1.7px]" alt="logo" />
+        umit<span className="text-[#818181]"></span>
       </Link>
 
       {/* Desktop Nav */}
