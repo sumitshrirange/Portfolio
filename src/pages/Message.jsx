@@ -1,19 +1,22 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Heading from "../components/ui/Heading";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
+import { PulseLoader } from "react-spinners";
 
 function Message() {
   const defaultInputStyle =
-    "border border-gray-500 py-1.5 px-3 rounded-lg outline-none focus:border-[#07e1c1] duration-200 w-full";
+    "border border-gray-500 py-1.5 px-3 rounded-md outline-none focus:border-[#07e1c1] duration-200 w-full";
   const defaultLabelStyle =
     "absolute -top-2 left-4 md:left-5 text-xs px-1 bg-[#151312] uppercase text-[#07bea2]";
 
+  const [loading, setLoading] = useState(false)
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
 
+    setLoading(true)
     emailjs
       .sendForm("service_38h3lvl", "template_97xalrz", form.current, {
         publicKey: "Xn44s8pL3k20P_ZaL",
@@ -24,6 +27,8 @@ function Message() {
           toast.success("Message Sent.");
 
           form.current.reset();
+
+          setLoading(false)
         },
         (error) => {
           console.log("FAILED...", error.text);
@@ -90,12 +95,11 @@ function Message() {
         </div>
 
         <button
-          className="p-2 bg-[#07bea2] rounded-lg font-semibold cursor-pointer"
+          className="p-2 bg-[#07bea2] rounded-md font-semibold cursor-pointer"
           type="submit"
-        >
-          Send
+        > {loading ? (<PulseLoader color="white" loading={loading} size={10}/>) : 'Send'}
         </button>
-      </form>
+      </form>    
     </section>
   );
 }

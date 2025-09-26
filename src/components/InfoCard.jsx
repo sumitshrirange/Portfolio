@@ -7,7 +7,7 @@ import { IoMdDownload } from "react-icons/io";
 
 // Reusable Social Icon
 const SocialIcon = ({ href, icon: Icon, label }) => (
-  <li className="p-1 transition-transform duration-150 hover:-translate-y-2">
+  <li className="p-1 transition-transform duration-300 hover:rotate-x-15 hover:-rotate-y-45">
     <a
       href={href}
       aria-label={label}
@@ -27,7 +27,7 @@ const ResumeButtons = () => (
       href="/resume.pdf"
       target="_blank"
       rel="noopener noreferrer"
-      className="flex items-center gap-1 rounded-full bg-[#CACED0] px-4 py-2 text-sm font-bold text-[#068f7a]"
+      className="flex items-center gap-1 rounded-full bg-[#dde1e3] px-4 py-2 text-sm font-semibold text-[#068f7a] hover:text-white hover:bg-[#068f7a] duration-300"
     >
       View Resume <PiEyeDuotone className="size-[17px]" />
     </a>
@@ -35,7 +35,7 @@ const ResumeButtons = () => (
     <a
       href="/resume.pdf"
       download="Sumit_Shrirange_Resume.pdf"
-      className="rounded-full bg-[#CACED0] p-[7px] text-xl font-semibold text-[#068f7a]"
+      className="rounded-full bg-[#dde1e3] p-[7px] text-xl font-semibold text-[#068f7a] hover:text-white hover:bg-[#068f7a] duration-300"
     >
       <IoMdDownload />
     </a>

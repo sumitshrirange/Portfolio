@@ -4,10 +4,11 @@ import InfoCard from "../components/InfoCard";
 import { Outlet } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import Message from "./Message";
+import Footer from "../components/Footer";
 
 function Layout() {
   return (
-    <div className="w-full relative flex flex-col lg:flex-row items-center justify-between lg:py-30 xl:px-30 px-10">
+    <div className="w-full relative flex flex-col lg:flex-row items-center justify-between lg:pt-30 lg:pb-15 xl:px-30 px-10">
       <Header />
       <InfoCard />
 
@@ -16,6 +17,7 @@ function Layout() {
         <div className="mt-17">
           <Message />
         </div>
+        <Footer/>
       </div>
       <ToastContainer position="top-right" theme="dark" />
     </div>
