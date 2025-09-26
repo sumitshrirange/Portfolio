@@ -11,7 +11,7 @@ const SocialIcon = ({ href, icon: Icon, label }) => (
     <a
       href={href}
       aria-label={label}
-      className="text-green-800 text-2xl"
+      className="text-[#068f7a] text-2xl"
       target={href.startsWith("http") ? "_blank" : undefined}
       rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
     >
@@ -27,7 +27,7 @@ const ResumeButtons = () => (
       href="/resume.pdf"
       target="_blank"
       rel="noopener noreferrer"
-      className="flex items-center gap-1 rounded-full bg-[#CACED0] px-4 py-2 text-sm font-bold text-[#04772e]"
+      className="flex items-center gap-1 rounded-full bg-[#CACED0] px-4 py-2 text-sm font-bold text-[#068f7a]"
     >
       View Resume <PiEyeDuotone className="size-[17px]" />
     </a>
@@ -35,7 +35,7 @@ const ResumeButtons = () => (
     <a
       href="/resume.pdf"
       download="Sumit_Shrirange_Resume.pdf"
-      className="rounded-full bg-[#CACED0] p-[7px] text-xl font-semibold text-[#04772e]"
+      className="rounded-full bg-[#CACED0] p-[7px] text-xl font-semibold text-[#068f7a]"
     >
       <IoMdDownload />
     </a>
