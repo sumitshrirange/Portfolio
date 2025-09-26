@@ -16,7 +16,7 @@ const navItems = [
   { path: "/projects", icon: Folder, label: "Projects" },
   { path: "/experience", icon: Briefcase, label: "Experience" },
   { path: "/education", icon: GraduationCap, label: "Education" },
-  { path: "/languages", icon: CodeXml, label: "Languages" },
+  { path: "/skills", icon: CodeXml, label: "Skills" },
 ];
 
 // Reusable Nav Item

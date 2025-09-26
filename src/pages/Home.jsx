@@ -3,6 +3,7 @@ import Heading from "../components/ui/Heading";
 import Projects from "./Projects";
 import Experience from "./Experience";
 import Education from "./Education";
+import Skills from "./Skills";
 
 // Reusable stat card component
 const StatCard = React.memo(({ number, label }) => (
@@ -46,6 +47,7 @@ function Home() {
       <Projects/>
       <Experience/>
       <Education/>
+      <Skills/>
     </div>
   );
 }
