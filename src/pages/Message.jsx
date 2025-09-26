@@ -10,13 +10,13 @@ function Message() {
   const defaultLabelStyle =
     "absolute -top-2 left-4 md:left-5 text-xs px-1 bg-[#151312] uppercase text-[#07bea2]";
 
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    setLoading(true)
+    setLoading(true);
     emailjs
       .sendForm("service_38h3lvl", "template_97xalrz", form.current, {
         publicKey: "Xn44s8pL3k20P_ZaL",
@@ -28,7 +28,7 @@ function Message() {
 
           form.current.reset();
 
-          setLoading(false)
+          setLoading(false);
         },
         (error) => {
           console.log("FAILED...", error.text);
@@ -97,9 +97,14 @@ function Message() {
         <button
           className="p-2 bg-[#07bea2] rounded-md font-semibold cursor-pointer"
           type="submit"
-        > {loading ? (<PulseLoader color="white" loading={loading} size={10}/>) : 'Send'}
+        >
+          {loading ? (
+            <PulseLoader color="white" loading={loading} size={10} />
+          ) : (
+            "Send"
+          )}
         </button>
-      </form>    
+      </form>
     </section>
   );
 }

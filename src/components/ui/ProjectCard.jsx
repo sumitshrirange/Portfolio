@@ -59,7 +59,10 @@ function ProjectCard() {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
       {dataProject.map((project) => (
-        <div key={project.name} className="p-[.6px] lg:p-0 rounded-2xl lg:bg-none bg-gradient-to-tr from-[#151312] to-[#07e1c1]">
+        <div
+          key={project.name}
+          className="p-[.6px] lg:p-0 rounded-2xl lg:bg-none bg-gradient-to-tr from-[#151312] to-[#07e1c1]"
+        >
           <div
             key={project.name}
             className="relative lg:bg-[#35333448] bg-[#181818] p-5 rounded-2xl h-full"

@@ -27,7 +27,10 @@ function Experience() {
       <Heading text1="WORK" text2="EXPERIENCE" />
       <div className="mt-10">
         {experienceData.map((items) => (
-          <div key={items.endJob} className="relative border-l-2 pb-15 pl-5 flex flex-col gap-5">
+          <div
+            key={items.endJob}
+            className="relative border-l-2 pb-15 pl-5 flex flex-col gap-5"
+          >
             <span className="absolute -left-[7px] top-0 bg-white size-3 rounded-full" />
             <div>
               <h3 className="text-xl font-semibold">{items.domain}</h3>

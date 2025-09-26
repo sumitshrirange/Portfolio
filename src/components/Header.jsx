@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import logoImg from "../assets/logo.png"
+import logoImg from "../assets/logo.png";
 import {
   Briefcase,
   CodeXml,
@@ -41,7 +41,10 @@ function Header() {
   return (
     <header className="fixed top-0 z-10 flex w-full items-center lg:top-5 lg:left-30 lg:w-fit">
       {/* Logo */}
-      <Link to={"/"} className="flex w-full items-center bg-[#151312] px-3 py-2 text-2xl font-bold lg:px-0 lg:py-0">
+      <Link
+        to={"/"}
+        className="flex w-full items-center bg-[#151312] px-3 py-2 text-2xl font-bold lg:px-0 lg:py-0"
+      >
         <img src={logoImg} className="w-[21px] mb-[1.7px]" alt="logo" />
         umit<span className="text-[#818181]"></span>
       </Link>

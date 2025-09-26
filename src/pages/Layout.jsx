@@ -17,7 +17,7 @@ function Layout() {
         <div className="mt-17">
           <Message />
         </div>
-        <Footer/>
+        <Footer />
       </div>
       <ToastContainer position="top-right" theme="dark" />
     </div>
@@ -25,5 +25,3 @@ function Layout() {
 }
 
 export default Layout;
-
-// https://sawad.framer.website/
