@@ -3,6 +3,7 @@ import Heading from "../components/ui/Heading";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
 import { PulseLoader } from "react-spinners";
+import { motion } from "motion/react";
 
 function Message() {
   const defaultInputStyle =
@@ -40,7 +41,10 @@ function Message() {
     <section className="flex flex-col items-center justify-center lg:inline">
       <Heading text1="YOUR" text2="QUERIES" />
 
-      <form
+      <motion.form
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
         ref={form}
         onSubmit={sendEmail}
         className="rounded-xl grid grid-cols-1 gap-5 mt-8 w-full"
@@ -104,7 +108,7 @@ function Message() {
             "Send"
           )}
         </button>
-      </form>
+      </motion.form>
     </section>
   );
 }

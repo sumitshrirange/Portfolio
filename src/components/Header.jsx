@@ -10,6 +10,7 @@ import {
   GraduationCap,
   House,
 } from "lucide-react";
+import { motion } from "motion/react";
 
 const navItems = [
   { path: "/", icon: House, label: "Home" },
@@ -39,7 +40,12 @@ function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 z-10 flex w-full items-center lg:top-5 lg:left-30 lg:w-fit">
+    <motion.header
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      className="fixed top-0 z-10 flex w-full items-center lg:top-5 lg:left-30 lg:w-fit"
+    >
       {/* Logo */}
       <Link
         to={"/"}
@@ -61,7 +67,9 @@ function Header() {
 
       {/* Mobile Nav */}
       {open && (
-        <nav
+        <motion.nav
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
           className="lg:hidden flex items-center gap-4 bg-[#151312] py-[14px] px-4"
           aria-label="Mobile navigation"
         >
@@ -74,7 +82,7 @@ function Header() {
               onClick={() => setOpen(false)}
             />
           ))}
-        </nav>
+        </motion.nav>
       )}
 
       {/* Mobile Toggle */}
@@ -85,7 +93,7 @@ function Header() {
       >
         {open ? <Ellipsis size={20} /> : <EllipsisVertical size={20} />}
       </button>
-    </header>
+    </motion.header>
   );
 }
 

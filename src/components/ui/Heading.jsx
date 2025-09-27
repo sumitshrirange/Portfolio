@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "motion/react";
 
 function Heading({
   text1,
@@ -9,9 +10,14 @@ function Heading({
   secondaryColor = "text-[#353334]",
 }) {
   return (
-    <h1 className={`${size} font-bold ${align} ${primaryColor}`}>
+    <motion.h1
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      className={`${size} font-bold ${align} ${primaryColor}`}
+    >
       {text1} <span className={secondaryColor}>{text2}</span>
-    </h1>
+    </motion.h1>
   );
 }
 

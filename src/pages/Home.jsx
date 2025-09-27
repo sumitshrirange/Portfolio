@@ -4,25 +4,32 @@ import Projects from "./Projects";
 import Experience from "./Experience";
 import Education from "./Education";
 import Skills from "./Skills";
+import { motion } from "motion/react";
+import CountUp from "react-countup";
 
 // Reusable stat card component
 const StatCard = React.memo(({ number, label }) => (
   <article className="w-18 lg:w-30 text-center lg:text-left">
-    <h2 className="text-4xl lg:text-6xl font-bold">{number}</h2>
+    <h2 className="text-4xl lg:text-6xl font-bold">+<CountUp end={number} duration={4} /></h2>
     <p className="text-[#818181] text-xs lg:text-base">{label}</p>
   </article>
 ));
 
 function Home() {
   const stats = [
-    { number: "+4", label: "MONTHS OF EXPERIENCE" },
-    { number: "+12", label: "PROJECTS COMPLETED" },
-    { number: "+18", label: "LANGUAGES LEARNT" },
+    { number: 4, label: "MONTHS OF EXPERIENCE" },
+    { number: 12, label: "PROJECTS COMPLETED" },
+    { number: 18, label: "LANGUAGES LEARNT" },
   ];
 
   return (
     <div className="flex flex-col lg:gap-30 gap-20">
-      <section className="flex flex-col items-center justify-center lg:inline">
+      <motion.section
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="flex flex-col items-center justify-center lg:inline"
+      >
         <Heading
           text1="SOFTWARE"
           text2="ENGINEER"
@@ -46,7 +53,7 @@ function Home() {
             <StatCard key={label} number={number} label={label} />
           ))}
         </div>
-      </section>
+      </motion.section>
 
       <Projects />
       <Experience />

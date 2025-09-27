@@ -4,6 +4,7 @@ import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { MdCall } from "react-icons/md";
 import { PiEyeDuotone } from "react-icons/pi";
 import { IoMdDownload } from "react-icons/io";
+import { motion } from "motion/react";
 
 // Reusable Social Icon
 const SocialIcon = ({ href, icon: Icon, label }) => (
@@ -67,7 +68,18 @@ function InfoCard() {
   ];
 
   return (
-    <aside className="relative top-13 flex h-[580px] w-90 flex-col items-center justify-evenly rounded-2xl bg-white py-10 lg:fixed lg:top-24 lg:h-4/5 lg:w-100">
+    <motion.aside
+      drag="x"
+      dragDirectionLock
+      dragConstraints={{ top: 0, right: 0, bottom: 0, left: 0 }}
+      dragTransition={{ bounceStiffness: 500, bounceDamping: 15 }}
+      dragElastic={0.2}
+      whileDrag={{ cursor: "grabbing", scale: 0.95 }}
+      initial={{ opacity: 0, y: -50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      className="relative top-13 flex h-[580px] w-90 flex-col items-center justify-evenly rounded-2xl bg-white py-10 lg:fixed lg:top-24 lg:h-4/5 lg:w-100"
+    >
       {/* Admin Image */}
       <div className="flex h-[65%] w-[75%] items-center overflow-hidden rounded-2xl">
         <img
@@ -93,7 +105,7 @@ function InfoCard() {
 
       {/* Resume Buttons */}
       <ResumeButtons />
-    </aside>
+    </motion.aside>
   );
 }
 

@@ -2,6 +2,7 @@ import portfolioImg from "../../assets/portfolio-img.png";
 import theNewsImg from "../../assets/thenew-img.png";
 import foodieImg from "../../assets/foodie-img.png";
 import { Dot, Github, Globe } from "lucide-react";
+import { motion } from "motion/react";
 
 function ProjectCard() {
   const dataProject = [
@@ -59,7 +60,15 @@ function ProjectCard() {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
       {dataProject.map((project) => (
-        <div
+        <motion.div
+          drag="x"
+          dragElastic={0.2}
+          dragConstraints={{ top: 0, right: 0, bottom: 0, left: 0 }}
+          whileDrag={{ cursor: "grabbing", scale: 0.95 }}
+          whileHover={{ scale: 1.05 }}
+          transition={{ type: "spring", stiffness: 400, damping: 5 }}
+          initial={{ x: 8 }}
+          whileInView={{ x: 0 }}
           key={project.name}
           className="p-[.6px] lg:p-0 rounded-2xl lg:bg-none bg-gradient-to-tr from-[#151312] to-[#07e1c1]"
         >
@@ -118,7 +127,7 @@ function ProjectCard() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       ))}
     </div>
   );

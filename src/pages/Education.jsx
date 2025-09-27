@@ -1,6 +1,7 @@
 import React from "react";
 import Heading from "../components/ui/Heading";
 import { CalendarDays } from "lucide-react";
+import { motion } from "motion/react";
 
 function Education() {
   const educationData = [
@@ -37,7 +38,10 @@ function Education() {
       <Heading text1="MAJOR" text2="EDUCATION" />
       <div className="mt-10">
         {educationData.map((items) => (
-          <div
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
             key={items.college}
             className="relative border-l-2 pb-15 pl-5 flex flex-col gap-5"
           >
@@ -60,7 +64,7 @@ function Education() {
                 {items.startClg} - {items.endClg}
               </span>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>
