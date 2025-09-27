@@ -44,12 +44,12 @@ function Header() {
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
-      className="fixed top-0 z-10 flex w-full items-center lg:top-5 lg:left-30 lg:w-fit"
+      className="fixed top-0 z-10 flex w-full bg-[#151312] items-center lg:top-5 lg:left-30 lg:w-fit"
     >
       {/* Logo */}
       <Link
         to={"/"}
-        className="flex w-full items-center bg-[#151312] px-3 py-2 text-2xl font-bold lg:px-0 lg:py-0"
+        className="flex w-full items-center px-3 py-2 text-2xl font-bold lg:px-0 lg:py-0"
       >
         <img src={logoImg} className="w-[21px] mb-[1.7px]" alt="logo" />
         umit<span className="text-[#818181]"></span>
@@ -78,7 +78,6 @@ function Header() {
               key={path}
               path={path}
               Icon={Icon}
-              label={label}
               onClick={() => setOpen(false)}
             />
           ))}
