@@ -6,24 +6,6 @@ import { motion } from "motion/react";
 function Education() {
   const educationData = [
     {
-      college: "Loksewa Jr. College Kosamtondi, India",
-      stream: "SSC (Class X)",
-      score: "Percentage: 81.20%",
-      subjects:
-        "English, Hindi, Marathi, Mathematics, Science & Technology, Social Science",
-      startClg: "2019",
-      endClg: "2020",
-    },
-    {
-      college: "Navjeevan Vidyalaya & Jr. Sci. College Sakoli, India",
-      stream: "HSC (Class XII)",
-      score: "Percentage: 60.83%",
-      subjects:
-        "Physics, Chemistry, Mathematics & Statistics, Biology, English, Marathi",
-      startClg: "2021",
-      endClg: "2022",
-    },
-    {
       college: "Wainganga College of Engineering & Management, Nagpur",
       stream: "Computer Science & Engineering",
       score: "CGPA: 6.52",
@@ -31,6 +13,24 @@ function Education() {
         "Data Structures, Operating Systems, DBMS, Computer Networks, Theory of Computation, Artificial Intelligence, Machine Learning, Deep Learning, Software Engineering & Project Management",
       startClg: "2022",
       endClg: "Present",
+    },
+    {
+      college: "Navjeevan Vidyalaya & Jr. Sci. College Sakoli, India",
+      stream: "HSC (Class XII)",
+      score: "Percentage: 60.83%",
+      subjects:
+      "Physics, Chemistry, Mathematics & Statistics, Biology, English, Marathi",
+      startClg: "2021",
+      endClg: "2022",
+    },
+    {
+      college: "Loksewa Jr. College Kosamtondi, India",
+      stream: "SSC (Class X)",
+      score: "Percentage: 81.20%",
+      subjects:
+        "English, Hindi, Marathi, Mathematics, Science & Technology, Social Science",
+      startClg: "2019",
+      endClg: "2020",
     },
   ];
   return (

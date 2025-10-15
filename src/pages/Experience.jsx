@@ -5,21 +5,21 @@ import { motion } from "motion/react";
 
 const experienceData = [
   {
-    domain: "Web Development Intern",
+    domain: "Full-Stack Developer | Intern",
+    company: "Navodita Infotech",
+    summary:
+      "Gained hands-on experience in full-stack development and contributing to a real-life project. Collaborated with mentors to strengthen both technical and soft skills, improving teamwork and communication. Contributed to building the frontend and backend, ensuring optimized performance and usability.",
+    startJob: "Oct'25",
+    endJob: "Present",
+  },
+  {
+    domain: "Web Developer | Intern",
     company: "Anishree Technologies LLP",
     summary:
       "Gained hands-on experience in frontend development using HTML, CSS, JavaScript, and React.js. Collaborated with mentors to strengthen both technical and soft skills, improving teamwork and communication. Contributed to building and testing responsive web interfaces, ensuring optimized performance and usability.",
     startJob: "Jan'24",
     endJob: "Apr'24",
   },
-  // {
-  //   domain: "Software Engineer",
-  //   company: "-",
-  //   summary:
-  //     "Gained hands-on experience in frontend development using HTML, CSS, JavaScript, and React.js. Collaborated with mentors to strengthen both technical and soft skills, improving teamwork and communication. Contributed to building and testing responsive web interfaces, ensuring optimized performance and usability.",
-  //   startJob: "Jun'26",
-  //   endJob: "Present",
-  // },
 ];
 
 function Experience() {
