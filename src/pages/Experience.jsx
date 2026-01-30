@@ -2,6 +2,8 @@ import React from "react";
 import Heading from "../components/ui/Heading";
 import { CalendarDays } from "lucide-react";
 import { motion } from "motion/react";
+import { Helmet } from "react-helmet-async";
+import { SITE_NAME, SITE_URL } from "../seo/seoConfig";
 
 const experienceData = [
   {
@@ -32,33 +34,44 @@ const experienceData = [
 
 function Experience() {
   return (
-    <section className="flex flex-col items-center justify-center lg:inline">
-      <Heading text1="WORK" text2="EXPERIENCE" />
-      <div className="mt-10">
-        {experienceData.map((items) => (
-          <motion.div
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            key={items.endJob}
-            className="relative border-l-2 pb-15 pl-5 flex flex-col gap-5"
-          >
-            <span className="absolute -left-[7px] top-0 bg-white size-3 rounded-full" />
-            <div>
-              <h3 className="text-xl font-semibold">{items.domain}</h3>
-              <span className="text-[#808080] text-sm">{items.company}</span>
-            </div>
-            <p className="text-sm">{items.summary}</p>
-            <div className="flex items-center gap-1.5">
-              <CalendarDays size={16} />
-              <span className="text-[#808080] text-sm">
-                {items.startJob} - {items.endJob}
-              </span>
-            </div>
-          </motion.div>
-        ))}
-      </div>
-    </section>
+    <>
+      <Helmet>
+        <title>Experience | {SITE_NAME}</title>
+        <meta
+          name="description"
+          content="Professional experience as a Full Stack Web Developer, including real-world projects, internships, and industry exposure."
+        />
+        <link rel="canonical" href={`${SITE_URL}/experience`} />
+      </Helmet>
+
+      <section className="flex flex-col items-center justify-center lg:inline">
+        <Heading text1="WORK" text2="EXPERIENCE" />
+        <div className="mt-10">
+          {experienceData.map((items) => (
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+              key={items.endJob}
+              className="relative border-l-2 pb-15 pl-5 flex flex-col gap-5"
+            >
+              <span className="absolute -left-[7px] top-0 bg-white size-3 rounded-full" />
+              <div>
+                <h3 className="text-xl font-semibold">{items.domain}</h3>
+                <span className="text-[#808080] text-sm">{items.company}</span>
+              </div>
+              <p className="text-sm">{items.summary}</p>
+              <div className="flex items-center gap-1.5">
+                <CalendarDays size={16} />
+                <span className="text-[#808080] text-sm">
+                  {items.startJob} - {items.endJob}
+                </span>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+    </>
   );
 }
 

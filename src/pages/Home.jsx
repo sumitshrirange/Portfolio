@@ -6,11 +6,15 @@ import Education from "./Education";
 import Skills from "./Skills";
 import { motion } from "motion/react";
 import CountUp from "react-countup";
+import { Helmet } from "react-helmet-async";
+import { SITE_NAME, DEFAULT_DESCRIPTION, SITE_URL } from "../seo/seoConfig";
 
 // Reusable stat card component
 const StatCard = React.memo(({ number, label }) => (
   <article className="w-18 lg:w-30 text-center lg:text-left">
-    <h2 className="text-4xl lg:text-6xl font-bold">+<CountUp end={number} duration={4} /></h2>
+    <h2 className="text-4xl lg:text-6xl font-bold">
+      +<CountUp end={number} duration={4} />
+    </h2>
     <p className="text-[#818181] text-xs lg:text-base">{label}</p>
   </article>
 ));
@@ -23,43 +27,51 @@ function Home() {
   ];
 
   return (
-    <div className="flex flex-col lg:gap-30 gap-20">
-      <motion.section
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="flex flex-col items-center justify-center lg:inline"
-      >
-        <Heading
-          text1="SOFTWARE"
-          text2="ENGINEER"
-          align="text-center lg:text-start"
-        />
+    <>
+      <Helmet>
+        <title>{SITE_NAME}</title>
+        <meta name="description" content={DEFAULT_DESCRIPTION} />
+        <link rel="canonical" href={SITE_URL} />
+      </Helmet>
 
-        <p className="mt-5 mb-5 lg:mb-15 text-[#818181] text-justify">
-          Aspiring Full Stack Web Developer skilled in building responsive and
-          scalable applications using the MERN stack.{" "}
-          <span className="hidden lg:inline">
-            Proficient in JavaScript, RESTful APIs, and experienced in both
-            front-end and back-end development with a focus on clean,
-            maintainable code and practical problem-solving.
-          </span>{" "}
-          Currently looking for an opportunity to contribute, learn, and grow as
-          a developer.
-        </p>
+      <div className="flex flex-col lg:gap-30 gap-20">
+        <motion.section
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="flex flex-col items-center justify-center lg:inline"
+        >
+          <Heading
+            text1="SOFTWARE"
+            text2="ENGINEER"
+            align="text-center lg:text-start"
+          />
 
-        <div className="flex w-full items-center justify-between lg:justify-start lg:gap-8">
-          {stats.map(({ number, label }) => (
-            <StatCard key={label} number={number} label={label} />
-          ))}
-        </div>
-      </motion.section>
+          <p className="mt-5 mb-5 lg:mb-15 text-[#818181] text-justify">
+            Aspiring Full Stack Web Developer skilled in building responsive and
+            scalable applications using the MERN stack.{" "}
+            <span className="hidden lg:inline">
+              Proficient in JavaScript, RESTful APIs, and experienced in both
+              front-end and back-end development with a focus on clean,
+              maintainable code and practical problem-solving.
+            </span>{" "}
+            Currently looking for an opportunity to contribute, learn, and grow
+            as a developer.
+          </p>
 
-      <Projects />
-      <Experience />
-      <Education />
-      <Skills />
-    </div>
+          <div className="flex w-full items-center justify-between lg:justify-start lg:gap-8">
+            {stats.map(({ number, label }) => (
+              <StatCard key={label} number={number} label={label} />
+            ))}
+          </div>
+        </motion.section>
+
+        <Projects />
+        <Experience />
+        <Education />
+        <Skills />
+      </div>
+    </>
   );
 }
 

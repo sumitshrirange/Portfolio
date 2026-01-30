@@ -2,6 +2,8 @@ import React from "react";
 import Heading from "../components/ui/Heading";
 import { CalendarDays } from "lucide-react";
 import { motion } from "motion/react";
+import { Helmet } from "react-helmet-async";
+import { SITE_NAME, SITE_URL } from "../seo/seoConfig";
 
 function Education() {
   const educationData = [
@@ -19,7 +21,7 @@ function Education() {
       stream: "HSC (Class XII)",
       score: "Percentage: 60.83%",
       subjects:
-      "Physics, Chemistry, Mathematics & Statistics, Biology, English, Marathi",
+        "Physics, Chemistry, Mathematics & Statistics, Biology, English, Marathi",
       startClg: "2021",
       endClg: "2022",
     },
@@ -34,40 +36,51 @@ function Education() {
     },
   ];
   return (
-    <section className="flex flex-col items-center justify-center lg:inline">
-      <Heading text1="MAJOR" text2="EDUCATION" />
-      <div className="mt-10">
-        {educationData.map((items) => (
-          <motion.div
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            key={items.college}
-            className="relative border-l-2 pb-15 pl-5 flex flex-col gap-5"
-          >
-            <span className="absolute -left-[7px] top-0 bg-white size-3 rounded-full" />
-            <div>
-              <h3 className="text-xl font-semibold">{items.college}</h3>
-              <span className="text-[#808080] text-sm">
-                {items.stream} | {items.score}
-              </span>
-            </div>
-            <p className="text-sm">
-              <span className="font-semibold mr-1 text-[#07bea2]">
-                Subjects:
-              </span>
-              {items.subjects}
-            </p>
-            <div className="flex items-center gap-1.5">
-              <CalendarDays size={16} />
-              <span className="text-[#808080] text-sm">
-                {items.startClg} - {items.endClg}
-              </span>
-            </div>
-          </motion.div>
-        ))}
-      </div>
-    </section>
+    <>
+      <Helmet>
+        <title>Education | {SITE_NAME}</title>
+        <meta
+          name="description"
+          content="Academic background and education details of Sumit Shrirange, including degree, university, and technical coursework."
+        />
+        <link rel="canonical" href={`${SITE_URL}/education`} />
+      </Helmet>
+
+      <section className="flex flex-col items-center justify-center lg:inline">
+        <Heading text1="MAJOR" text2="EDUCATION" />
+        <div className="mt-10">
+          {educationData.map((items) => (
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+              key={items.college}
+              className="relative border-l-2 pb-15 pl-5 flex flex-col gap-5"
+            >
+              <span className="absolute -left-[7px] top-0 bg-white size-3 rounded-full" />
+              <div>
+                <h3 className="text-xl font-semibold">{items.college}</h3>
+                <span className="text-[#808080] text-sm">
+                  {items.stream} | {items.score}
+                </span>
+              </div>
+              <p className="text-sm">
+                <span className="font-semibold mr-1 text-[#07bea2]">
+                  Subjects:
+                </span>
+                {items.subjects}
+              </p>
+              <div className="flex items-center gap-1.5">
+                <CalendarDays size={16} />
+                <span className="text-[#808080] text-sm">
+                  {items.startClg} - {items.endClg}
+                </span>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+    </>
   );
 }
 
