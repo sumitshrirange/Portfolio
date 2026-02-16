@@ -7,7 +7,7 @@ import { SITE_NAME, SITE_URL } from "../seo/seoConfig";
 
 const experienceData = [
   {
-    domain: "Web Developer",
+    domain: "Web Developer Intern",
     company: "Prancevia Pvt. Ltd.",
     summary:
       "Working on developing responsive frontend interfaces and implementing backend functionalities for full-stack web applications. Collaborated with cross-functional teams to deliver efficient features, focusing on performance, API integration, reusable components, and clean, maintainable code.",
