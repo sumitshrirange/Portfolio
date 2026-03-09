@@ -4,8 +4,11 @@ import { CalendarDays } from "lucide-react";
 import { motion } from "motion/react";
 import { Helmet } from "react-helmet-async";
 import { SITE_NAME, SITE_URL } from "../seo/seoConfig";
+import { useLocation } from "react-router-dom";
 
 function Education() {
+  const location = useLocation();
+  const isPage = location.pathname === "/education";
   const educationData = [
     {
       college: "Wainganga College of Engineering & Management, Nagpur",
@@ -37,14 +40,16 @@ function Education() {
   ];
   return (
     <>
-      <Helmet>
-        <title>Education | {SITE_NAME}</title>
-        <meta
-          name="description"
-          content="Academic background and education details of Sumit Shrirange, including degree, university, and technical coursework."
-        />
-        <link rel="canonical" href={`${SITE_URL}/education`} />
-      </Helmet>
+      {isPage && (
+        <Helmet>
+          <title>Education | {SITE_NAME}</title>
+          <meta
+            name="description"
+            content="Academic background and education details of Sumit Shrirange, including degree, university, and technical coursework."
+          />
+          <link rel="canonical" href={`${SITE_URL}/education`} />
+        </Helmet>
+      )}
 
       <section className="flex flex-col items-center justify-center lg:inline">
         <Heading text1="MAJOR" text2="EDUCATION" />

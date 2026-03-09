@@ -1,17 +1,25 @@
 import portfolioImg from "../../assets/portfolio-img.png";
 import theNewsImg from "../../assets/thenew-img.png";
 import foodieImg from "../../assets/foodie-img.png";
+import expenseiqImg from "../../assets/expenseiq.png";
 import { Dot, Github, Globe } from "lucide-react";
 import { motion } from "motion/react";
 
 function ProjectCard() {
   const dataProject = [
     {
-      name: "Portfolio",
-      githubLink: "https://github.com/sumitshrirange/Portfolio",
-      liveLink: "https://sumit-shrirange.vercel.app/",
-      thumbnail: portfolioImg,
-      techStack: ["React", "Tailwind CSS", "React-Dom", "Framer-Motion"],
+      name: "ExpenseIQ",
+      githubLink: "https://github.com/sumitshrirange",
+      liveLink: "https://expenseiq-sumit.vercel.app",
+      thumbnail: expenseiqImg,
+      techStack: [
+        "React",
+        "Node",
+        "Express",
+        "Tailwind CSS",
+        "MongoDB",
+        "NoSQL",
+      ],
     },
     {
       name: "The News",
@@ -28,6 +36,13 @@ function ProjectCard() {
       ],
     },
     {
+      name: "Portfolio",
+      githubLink: "https://github.com/sumitshrirange/Portfolio",
+      liveLink: "https://sumit-shrirange.vercel.app/",
+      thumbnail: portfolioImg,
+      techStack: ["React", "Tailwind CSS", "React-Dom", "Framer-Motion"],
+    },
+    {
       name: "Foodie",
       githubLink: "https://github.com/sumitshrirange/Foodie",
       liveLink: "https://foodie-e-commerce.netlify.app/",
@@ -38,21 +53,6 @@ function ProjectCard() {
         "React-Dom",
         "Tailwind CSS",
         "Framer-Motion",
-      ],
-    },
-    {
-      name: "Pulsights",
-      githubLink: "/",
-      liveLink: "/",
-      thumbnail:
-        "https://t3.ftcdn.net/jpg/08/69/07/78/360_F_869077811_HjRjVEw3f8QiAlHK4PabeRl95WWAZRr6.jpg",
-      techStack: [
-        "React",
-        "Node",
-        "Express",
-        "Tailwind CSS",
-        "MongoDB",
-        "NoSQL",
       ],
     },
   ];

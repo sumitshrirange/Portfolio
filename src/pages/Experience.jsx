@@ -4,6 +4,7 @@ import { CalendarDays } from "lucide-react";
 import { motion } from "motion/react";
 import { Helmet } from "react-helmet-async";
 import { SITE_NAME, SITE_URL } from "../seo/seoConfig";
+import { useLocation } from "react-router-dom";
 
 const experienceData = [
   {
@@ -33,16 +34,20 @@ const experienceData = [
 ];
 
 function Experience() {
+  const location = useLocation();
+  const isPage = location.pathname === "/experience";
   return (
     <>
-      <Helmet>
-        <title>Experience | {SITE_NAME}</title>
-        <meta
-          name="description"
-          content="Professional experience as a Full Stack Web Developer, including real-world projects, internships, and industry exposure."
-        />
-        <link rel="canonical" href={`${SITE_URL}/experience`} />
-      </Helmet>
+      {isPage && (
+        <Helmet>
+          <title>Experience | {SITE_NAME}</title>
+          <meta
+            name="description"
+            content="Professional experience as a Full Stack Web Developer, including real-world projects, internships, and industry exposure."
+          />
+          <link rel="canonical" href={`${SITE_URL}/experience`} />
+        </Helmet>
+      )}
 
       <section className="flex flex-col items-center justify-center lg:inline">
         <Heading text1="WORK" text2="EXPERIENCE" />

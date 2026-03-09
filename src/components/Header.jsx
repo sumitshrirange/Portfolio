@@ -44,20 +44,16 @@ function Header() {
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
-      className="fixed top-0 z-10 flex w-full bg-[#151312] items-center lg:top-5 lg:left-30 lg:w-fit"
+      className="fixed top-0 z-10 flex w-full lg:bg-transparent bg-[#151312] items-center justify-between lg:top-5 lg:left-30 lg:w-fit"
     >
       {/* Logo */}
-      <Link
-        to={"/"}
-        className="flex w-full items-center px-3 py-2 text-2xl font-bold lg:px-0 lg:py-0"
-      >
-        <img src={logoImg} className="w-[21px] mb-[1.7px]" alt="logo" />
-        umit<span className="text-[#818181]"></span>
+      <Link to={"/"} className="px-3 py-2 lg:px-0 lg:py-0">
+        <img src={logoImg} className="w-8 mb-[1.7px]" alt="logo" />
       </Link>
 
       {/* Desktop Nav */}
       <nav
-        className="hidden items-center gap-12 ml-100 rounded-2xl bg-[#1C1A19] px-8 py-4 lg:flex"
+        className="hidden items-center gap-12 ml-[29rem] rounded-2xl bg-[#1C1A19] px-8 py-4 lg:flex"
         aria-label="Main navigation"
       >
         {navItems.map(({ path, icon: Icon, label }) => (

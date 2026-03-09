@@ -4,18 +4,23 @@ import { Github } from "lucide-react";
 import { motion } from "motion/react";
 import { Helmet } from "react-helmet-async";
 import { SITE_NAME, SITE_URL } from "../seo/seoConfig";
+import { useLocation } from "react-router-dom";
 
 function Projects() {
+  const location = useLocation();
+  const isPage = location.pathname === "/projects";
   return (
     <>
-      <Helmet>
-        <title>Projects | {SITE_NAME}</title>
-        <meta
-          name="description"
-          content="Explore real-world web and full stack projects built using React, Node.js, MongoDB, and modern technologies."
-        />
-        <link rel="canonical" href={`${SITE_URL}/projects`} />
-      </Helmet>
+      {isPage && (
+        <Helmet>
+          <title>Projects | {SITE_NAME}</title>
+          <meta
+            name="description"
+            content="Explore real-world web and full stack projects built using React, Node.js, MongoDB, and modern technologies."
+          />
+          <link rel="canonical" href={`${SITE_URL}/projects`} />
+        </Helmet>
+      )}
 
       <section className="flex flex-col items-center justify-center lg:inline">
         <Heading text1="RECENT" text2="PROJECTS" />

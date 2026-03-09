@@ -3,18 +3,23 @@ import Heading from "../components/ui/Heading";
 import SkillsCard from "../components/ui/SkillsCard";
 import { Helmet } from "react-helmet-async";
 import { SITE_NAME, SITE_URL } from "../seo/seoConfig";
+import { useLocation } from "react-router-dom";
 
 function Skills() {
+  const location = useLocation();
+  const isPage = location.pathname === "/skills";
   return (
     <>
-      <Helmet>
-        <title>Skills | {SITE_NAME}</title>
-        <meta
-          name="description"
-          content="Technical skills including React, JavaScript, Node.js, MongoDB, REST APIs, and modern web development tools."
-        />
-        <link rel="canonical" href={`${SITE_URL}/skills`} />
-      </Helmet>
+      {isPage && (
+        <Helmet>
+          <title>Skills | {SITE_NAME}</title>
+          <meta
+            name="description"
+            content="Technical skills including React, JavaScript, Node.js, MongoDB, REST APIs, and modern web development tools."
+          />
+          <link rel="canonical" href={`${SITE_URL}/skills`} />
+        </Helmet>
+      )}
 
       <section className="flex flex-col items-center justify-center lg:inline">
         <Heading text1="TECHNICAL" text2="SKILLS" />
