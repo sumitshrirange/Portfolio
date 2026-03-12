@@ -60,34 +60,35 @@ function Header() {
           <NavItem key={path} path={path} Icon={Icon} label={label} />
         ))}
       </nav>
+      <div className="flex">
+        {/* Mobile Nav */}
+        {open && (
+          <motion.nav
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            className="lg:hidden flex items-center gap-6 bg-[#151312] py-[14px] px-4"
+            aria-label="Mobile navigation"
+          >
+            {navItems.map(({ path, icon: Icon, label }) => (
+              <NavItem
+                key={path}
+                path={path}
+                Icon={Icon}
+                onClick={() => setOpen(false)}
+              />
+            ))}
+          </motion.nav>
+        )}
 
-      {/* Mobile Nav */}
-      {open && (
-        <motion.nav
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          className="lg:hidden flex items-center gap-4 bg-[#151312] py-[14px] px-4"
-          aria-label="Mobile navigation"
+        {/* Mobile Toggle */}
+        <button
+          onClick={() => setOpen((prev) => !prev)}
+          className="lg:hidden bg-[#151312] px-3 py-[14px] mr-3 focus:outline-none"
+          aria-label="Toggle navigation menu"
         >
-          {navItems.map(({ path, icon: Icon, label }) => (
-            <NavItem
-              key={path}
-              path={path}
-              Icon={Icon}
-              onClick={() => setOpen(false)}
-            />
-          ))}
-        </motion.nav>
-      )}
-
-      {/* Mobile Toggle */}
-      <button
-        onClick={() => setOpen((prev) => !prev)}
-        className="lg:hidden bg-[#151312] px-3 py-[14px] mr-3 focus:outline-none"
-        aria-label="Toggle navigation menu"
-      >
-        {open ? <Ellipsis size={20} /> : <EllipsisVertical size={20} />}
-      </button>
+          {open ? <Ellipsis size={20} /> : <EllipsisVertical size={20} />}
+        </button>
+      </div>
     </motion.header>
   );
 }
