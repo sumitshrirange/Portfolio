@@ -2,11 +2,27 @@ import portfolioImg from "../../assets/portfolio-img.png";
 import theNewsImg from "../../assets/thenew-img.png";
 import foodieImg from "../../assets/foodie-img.png";
 import expenseiqImg from "../../assets/expenseiq.png";
+import newscrunchImg from "../../assets/newscrunch.png";
 import { Dot, Github, Globe } from "lucide-react";
 import { motion } from "motion/react";
 
 function ProjectCard() {
   const dataProject = [
+    {
+      name: "NewsCrunch",
+      githubLink: "https://github.com/sumitshrirange",
+      liveLink: "https://newscrunch.vercel.app",
+      thumbnail: newscrunchImg,
+      techStack: [
+        "React",
+        "Node",
+        "Express",
+        "Google Gemini",
+        "Serp API",
+        "Tailwind CSS",
+        "MongoDB",
+      ],
+    },
     {
       name: "ExpenseIQ",
       githubLink: "https://github.com/sumitshrirange",
