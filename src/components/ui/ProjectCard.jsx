@@ -16,10 +16,8 @@ function ProjectCard() {
       techStack: [
         "React",
         "Node",
-        "Express",
         "Google Gemini",
         "Serp API",
-        "Tailwind CSS",
         "MongoDB",
       ],
     },
