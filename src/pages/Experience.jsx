@@ -8,21 +8,21 @@ import { useLocation } from "react-router-dom";
 
 const experienceData = [
   {
-    domain: "Web Developer Intern",
+    domain: "Web Developer",
     company: "Prancevia Pvt. Ltd.",
     summary:
       "Working on developing responsive frontend interfaces and implementing backend functionalities for full-stack web applications. Collaborated with cross-functional teams to deliver efficient features, focusing on performance, API integration, reusable components, and clean, maintainable code.",
     startJob: "Jan'26",
     endJob: "Present",
   },
-  {
-    domain: "Full-Stack Developer | Intern",
-    company: "Navodita Infotech",
-    summary:
-      "Gained hands-on experience in full-stack development and contributing to a real-life project. Collaborated with mentors to strengthen both technical and soft skills, improving teamwork and communication. Contributed to building the frontend and backend, ensuring optimized performance and usability.",
-    startJob: "Oct'25",
-    endJob: "Nov'25",
-  },
+  // {
+  //   domain: "Full-Stack Developer | Intern",
+  //   company: "Navodita Infotech",
+  //   summary:
+  //     "Gained hands-on experience in full-stack development and contributing to a real-life project. Collaborated with mentors to strengthen both technical and soft skills, improving teamwork and communication. Contributed to building the frontend and backend, ensuring optimized performance and usability.",
+  //   startJob: "Oct'25",
+  //   endJob: "Nov'25",
+  // },
   {
     domain: "Web Developer | Intern",
     company: "Anishree Technologies LLP",
