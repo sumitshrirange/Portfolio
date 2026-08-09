@@ -21,7 +21,7 @@ const StatCard = React.memo(({ number, label }) => (
 
 function Home() {
   const stats = [
-    { number: 4, label: "MONTHS OF EXPERIENCE" },
+    { number: 6, label: "MONTHS OF EXPERIENCE" },
     { number: 12, label: "PROJECTS COMPLETED" },
     { number: 18, label: "LANGUAGES LEARNT" },
   ];
@@ -48,7 +48,7 @@ function Home() {
           />
 
           <p className="mt-5 mb-5 lg:mb-15 text-[#818181] text-justify">
-            Aspiring Full Stack Web Developer skilled in building responsive and
+            Full Stack Web Developer skilled in building responsive and
             scalable applications using the MERN stack.{" "}
             <span className="hidden lg:inline">
               Proficient in JavaScript, RESTful APIs, and experienced in both

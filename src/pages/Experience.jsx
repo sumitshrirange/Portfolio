@@ -8,12 +8,20 @@ import { useLocation } from "react-router-dom";
 
 const experienceData = [
   {
+    domain: "Full Stack Developer",
+    company: "Margmaker Solutions Pvt. Ltd.",
+    summary:
+      "Working as a Full Stack Developer, focused on designing, developing, and debugging web applications. Working with frontend, backend, PostgreSQL, Drizzle ORM, API integration, bug fixing, and problem-solving to build efficient and maintainable solutions.",
+    startJob: "July'26",
+    endJob: "Present",
+  },
+  {
     domain: "Web Developer",
     company: "Prancevia Pvt. Ltd.",
     summary:
       "Working on developing responsive frontend interfaces and implementing backend functionalities for full-stack web applications. Collaborated with cross-functional teams to deliver efficient features, focusing on performance, API integration, reusable components, and clean, maintainable code.",
     startJob: "Jan'26",
-    endJob: "Present",
+    endJob: "July'26",
   },
   // {
   //   domain: "Full-Stack Developer | Intern",

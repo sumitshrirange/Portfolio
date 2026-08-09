@@ -31,7 +31,7 @@ function Skills() {
           />
           <SkillsCard
             title="Backend Development"
-            skills="Node.js, Express.js, NoSQL, MongoDB, Firebase"
+            skills="Node.js, Express.js, NoSQL, MongoDB, SQL, PostgreSQL, Drizzle ORM, Firebase"
           />
           <SkillsCard
             title="Programming Languages"
@@ -39,7 +39,7 @@ function Skills() {
           />
           <SkillsCard
             title="Tools & Platforms"
-            skills="Git, GitHub, Postman, VS Code"
+            skills="Git, GitHub, RabbitVCS, Postman, VS Code"
           />
         </div>
       </section>
